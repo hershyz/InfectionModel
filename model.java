@@ -51,7 +51,7 @@ public class Main {
 
             System.out.println("Trial - " + i);
             double currentSpreadRate = minSpreadRate + (maxSpreadRate - minSpreadRate) * r.nextDouble();
-            double currentRecoveryRate = minRecoveryRate + (maxRecoveryRate - minRecoveryRate) * r.nextDouble();
+            double currentRecoveryRate = minRecoveryRate + (1 - (maxRecoveryRate - minRecoveryRate)) * r.nextDouble();
             populationInfected = populationInfected * currentSpreadRate;
             populationInfected = populationInfected * currentRecoveryRate;
 
